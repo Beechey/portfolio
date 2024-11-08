@@ -1,19 +1,11 @@
 "use client";
 
-import Grid from "@/components/home/Grid";
-import Hero from "@/components/home/Hero";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
-
-import { navItems } from "@/data";
+import Intro from "@/components/intro";
 
 export default function Home() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div>
-        <FloatingNav navItems={navItems} />
-        <Hero />
-        <Grid />
-      </div>
+    <main className="flex flex-col items-center px-5">
+      <Intro />
     </main>
   );
 }
