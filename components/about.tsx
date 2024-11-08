@@ -5,7 +5,8 @@ import SectionHeading from "./section_heading";
 export default function About() {
   return (
     <motion.section
-      className="mb-28 max-w-[50rem] text-center sm:mb-0"
+      id="about"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-32"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.125 }}>
