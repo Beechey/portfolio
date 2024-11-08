@@ -2,7 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { BsLinkedin, BsMailbox } from "react-icons/bs";
+import { FaGithubSquare } from "react-icons/fa";
+import { HiDownload } from "react-icons/hi";
 
 export default function Intro() {
   return (
@@ -17,7 +21,7 @@ export default function Intro() {
               duration: 0.2,
             }}>
             <Image
-              src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="/portrait.jpeg"
               alt="Matt's portrait"
               width="192"
               height="192"
@@ -51,6 +55,40 @@ export default function Intro() {
         experience. My focus is building{" "}
         <span className="underline">interesting products and models</span>.
       </motion.p>
+
+      <motion.div
+        className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}>
+        <Link
+          href="#contact"
+          className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition">
+          Contact me <BsMailbox />
+        </Link>
+        <a
+          href="/Dr Matthew Beechey - CV.pdf"
+          download
+          className="bg-white text-gray-900  px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-100 active:scale-105 transition border border-black/10">
+          Download CV <HiDownload />
+        </a>
+        <div className="flex flex-row gap-3">
+          <a
+            href="https://www.linkedin.com/in/matthew-beechey-09091994"
+            target="_blank"
+            className="bg-white text-gray-700  p-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-[1.15] hover:bg-gray-100 active:scale-105 transition border border-black/10">
+            <BsLinkedin />
+          </a>
+          <a
+            href="https://github.com/Beechey"
+            target="_blank"
+            className="bg-white text-gray-700  p-4 flex items-center gap-2 rounded-full text-[1.35rem] outline-none focus:scale-[1.15] hover:scale-110 hover:bg-gray-100 active:scale-105 transition border border-black/10">
+            <FaGithubSquare />
+          </a>
+        </div>
+      </motion.div>
     </section>
   );
 }
