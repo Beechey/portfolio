@@ -38,6 +38,7 @@ export const projectsData = [
     link: "https://www.sciencedirect.com/science/article/pii/S095070512100383X",
     description:
       "Developed a feature selection technique for binary classifiers using epistemic uncertainty.",
+    image: "lrds.png",
     tags: ["Pytorch", "Classification", "Feature Selection", "Uncertainty"],
   },
   {
@@ -47,6 +48,7 @@ export const projectsData = [
     link: "https://www.sciencedirect.com/science/article/pii/S1566253522002342",
     description:
       "Designed a technique to defend against adversarial machine learning attacks using epistemic uncertainty.",
+    image: "nnds.png",
     tags: [
       "Pytorch",
       "Classification",
@@ -61,6 +63,7 @@ export const projectsData = [
     link: "https://www.linkedin.com/pulse/data-driven-comfort-busmonitors-role-redefining-public-transportation-znpue",
     description:
       "An embedded IoT system to gather and predict transportation environment data.",
+    image: "busmonitor.png",
     tags: ["Embedded", "C", "Hardware", "Django", "Pytorch"],
   },
 ] as const;
