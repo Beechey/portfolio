@@ -4,7 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import lrdsImg from "@/public/lrds.png";
 import nndsImg from "@/public/nnds.png";
-import busmonitorImg from "@/public/busmonitor.png";
+import busmonitorImg from "@/public/busmonitor-post.png";
 
 export const links = [
   {
@@ -36,8 +36,6 @@ export const links = [
 export const projectsData = [
   {
     title: "LR-DS",
-    company: "Loughborough University",
-    year: "2021",
     link: "https://www.sciencedirect.com/science/article/pii/S095070512100383X",
     description:
       "Developed a feature selection technique for binary classifiers using epistemic uncertainty.",
@@ -46,8 +44,6 @@ export const projectsData = [
   },
   {
     title: "NN-DS",
-    company: "Loughborough University",
-    year: "2023",
     link: "https://www.sciencedirect.com/science/article/pii/S1566253522002342",
     description:
       "Designed a technique to defend against adversarial machine learning attacks using epistemic uncertainty.",
@@ -61,11 +57,9 @@ export const projectsData = [
   },
   {
     title: "BusMONITOR",
-    company: "Vectare Ltd",
-    year: "2024",
     link: "https://www.linkedin.com/pulse/data-driven-comfort-busmonitors-role-redefining-public-transportation-znpue",
     description:
-      "An embedded IoT system to gather and predict transportation environment data.",
+      "Created an embedded IoT system from scratch to gather and predict transportation environment data.",
     image: busmonitorImg,
     tags: ["Embedded", "C", "Hardware", "Django", "Pytorch"],
   },
