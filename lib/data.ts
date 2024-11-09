@@ -13,6 +13,10 @@ export const links = [
     hash: "#about",
   },
   {
+    name: "Projects",
+    hash: "#projects",
+  },
+  {
     name: "Skills",
     hash: "#skills",
   },
@@ -21,12 +25,43 @@ export const links = [
     hash: "#experience",
   },
   {
-    name: "Publications",
-    hash: "#publications",
-  },
-  {
     name: "Contact",
     hash: "#contact",
+  },
+] as const;
+
+export const projectsData = [
+  {
+    title: "LR-DS",
+    company: "Loughborough University",
+    year: "2021",
+    link: "https://www.sciencedirect.com/science/article/pii/S095070512100383X",
+    description:
+      "Developed a feature selection technique for binary classifiers using epistemic uncertainty.",
+    tags: ["Pytorch", "Classification", "Feature Selection", "Uncertainty"],
+  },
+  {
+    title: "NN-DS",
+    company: "Loughborough University",
+    year: "2023",
+    link: "https://www.sciencedirect.com/science/article/pii/S1566253522002342",
+    description:
+      "Designed a technique to defend against adversarial machine learning attacks using epistemic uncertainty.",
+    tags: [
+      "Pytorch",
+      "Classification",
+      "Adversarial Machine Learning",
+      "Uncertainty",
+    ],
+  },
+  {
+    title: "BusMONITOR",
+    company: "Vectare Ltd",
+    year: "2024",
+    link: "https://www.linkedin.com/pulse/data-driven-comfort-busmonitors-role-redefining-public-transportation-znpue",
+    description:
+      "An embedded IoT system to gather and predict transportation environment data.",
+    tags: ["Embedded", "C", "Hardware", "Django", "Pytorch"],
   },
 ] as const;
 
@@ -54,27 +89,6 @@ export const experiencesData = [
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
     icon: React.createElement(FaReact),
     date: "2021 - present",
-  },
-] as const;
-
-export const projectsData = [
-  {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-  },
-  {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
   },
 ] as const;
 
