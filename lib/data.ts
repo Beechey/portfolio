@@ -2,6 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import lrdsImg from "@/public/lrds.png";
+import nndsImg from "@/public/nnds.png";
+import busmonitorImg from "@/public/busmonitor.png";
 
 export const links = [
   {
@@ -38,7 +41,7 @@ export const projectsData = [
     link: "https://www.sciencedirect.com/science/article/pii/S095070512100383X",
     description:
       "Developed a feature selection technique for binary classifiers using epistemic uncertainty.",
-    image: "lrds.png",
+    image: lrdsImg,
     tags: ["Pytorch", "Classification", "Feature Selection", "Uncertainty"],
   },
   {
@@ -48,7 +51,7 @@ export const projectsData = [
     link: "https://www.sciencedirect.com/science/article/pii/S1566253522002342",
     description:
       "Designed a technique to defend against adversarial machine learning attacks using epistemic uncertainty.",
-    image: "nnds.png",
+    image: nndsImg,
     tags: [
       "Pytorch",
       "Classification",
@@ -63,7 +66,7 @@ export const projectsData = [
     link: "https://www.linkedin.com/pulse/data-driven-comfort-busmonitors-role-redefining-public-transportation-znpue",
     description:
       "An embedded IoT system to gather and predict transportation environment data.",
-    image: "busmonitor.png",
+    image: busmonitorImg,
     tags: ["Embedded", "C", "Hardware", "Django", "Pytorch"],
   },
 ] as const;
