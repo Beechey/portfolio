@@ -37,16 +37,26 @@ export default function Intro() {
           </section>
         </SlideReveal>
       </div>
+
       <SlideReveal>
-        <h2 className="pb-10 text-md sm:text-3xl">
-          I&apos;m a <span className="font-bold">machine learning</span>{" "}
-          engineer, <span className="font-bold">software</span> engineer and{" "}
-          <span className="font-bold">researcher</span> with almost a decade of
-          experience. My focus is building{" "}
-          <span className="underline">interesting products and models</span>.
+        <h2 className="pb-3 text-md sm:text-3xl">
+          I&apos;m a{" "}
+          <span className="font-bold text-blue-500">machine learning</span>{" "}
+          engineer, <span className="font-bold text-blue-500">software</span>{" "}
+          engineer and{" "}
+          <span className="font-bold text-blue-500">researcher</span>.
         </h2>
       </SlideReveal>
-
+      <SlideReveal>
+        <h2 className="pb-10 text-md sm:text-xl">
+          With almost a decade of experience, my focus is building{" "}
+          <span className="underline">interesting products and models</span>. My
+          interests span different areas, but are squarely focused around
+          technology. I acquired a PhD in machine learning in 2023, and since
+          then have been involved in hardware engineering, machine learning
+          engineering, data science and web development.
+        </h2>
+      </SlideReveal>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
