@@ -1,40 +1,26 @@
+"use client";
+
 import React from "react";
 import SectionHeading from "./section_heading";
+import { skillsData } from "@/lib/data";
 
 export default function Skills() {
+  // const ref = useSectionInView("Skills");
+
   return (
     <section
       id="skills"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-32">
-      <SectionHeading>Skills</SectionHeading>
-      <p className="">
-        I am a <span className="font-bold">collaborative</span> and driven
-        machine learning engineer with a strong foundation in technical skills,
-        as well as research and product management. After earning my PhD from{" "}
-        <span className="font-bold">Loughborough University</span>, where my
-        research on evidential classification in network security led to
-        <span className="font-bold"> high-impact publications</span>, I gained
-        experience in machine learning areas such as neural networks and
-        time-series forecasting. My recent role as a Technical Product Owner for
-        an IoT project allowed me to{" "}
-        <span className="font-bold">lead embedded engineering innovations</span>{" "}
-        for public transport, utilising my skills in hardware design, machine
-        learning, and stakeholder engagement to improve passenger experience.
-        <br />
-        <br />
-        In addition to technical expertise, I have completed{" "}
-        <span className="underline">advanced training</span> in{" "}
-        <span className="font-bold">leadership</span>,{" "}
-        <span className="font-bold">strategic innovation</span>, and{" "}
-        <span className="font-bold">project management</span>, which complement
-        my proficiency in cloud computing, embedded systems, and programming
-        languages like Python and C. I am known for a{" "}
-        <span className="underline">hands-on approach</span> to problem-solving
-        and continue to contribute to{" "}
-        <span className="font-bold">cutting-edge</span> research in Beyond 5G
-        networks, presenting my work at industry conferences and expanding my
-        impact across both academic and commercial domains.
-      </p>
+      className="max-w-[53rem] scroll-mt-28 text-center">
+      <SectionHeading>My skills</SectionHeading>
+      <ul className="flex flex-wrap justify-center gap-2 text-md text-gray-800">
+        {skillsData.map((skill, index) => (
+          <li
+            className="bg-white border botder-black/[0.1] rounded-xl px-5 py-3"
+            key={index}>
+            {skill}
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
