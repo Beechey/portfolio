@@ -11,7 +11,7 @@ export default function About() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.125 }}>
       <SectionHeading>About me</SectionHeading>
-      <p className="">
+      <p className="text-md sm:text-xl">
         I am a <span className="font-bold">collaborative</span> and driven
         machine learning engineer with a strong foundation in technical skills,
         as well as research and product management. After earning my PhD from{" "}
