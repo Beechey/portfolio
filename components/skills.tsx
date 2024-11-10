@@ -10,7 +10,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="max-w-[53rem] scroll-mt-28 text-center">
+      className="mb-28 max-w-[50rem] sm:mb-0 scroll-mt-32">
       <SectionHeading>My skills</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-md text-gray-800">
         {skillsData.map((skill, index) => (
