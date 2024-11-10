@@ -7,67 +7,57 @@ import React from "react";
 import { BsLinkedin, BsMailbox } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+import SlideReveal from "./ui/SlideReveal";
 
 export default function Intro() {
   return (
     <section
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
-      <div className="flex items-center justify-center">
-        <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.2,
-            }}>
-            <Image
-              src="/portrait.jpeg"
-              alt="Matt's portrait"
-              width="192"
-              height="192"
-              quality="95"
-              priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.25rem] border-white shadow-xl"
-            />
-          </motion.div>
-          <motion.span
-            className="absolute top-0 -right-2 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}>
-            👋
-          </motion.span>
-        </div>
+      <div className="flex justify-center">
+        <SlideReveal>
+          <section className="flex flex-col">
+            <div className="flex text-center justify-center">
+              <div className="content-center hidden sm:block">
+                <Image
+                  src="/portrait.jpeg"
+                  alt="Matt's portrait"
+                  width="192"
+                  height="192"
+                  quality="95"
+                  priority={true}
+                  className="h-24 w-24 rounded-full object-cover border-[0.25rem] border-white shadow-xl"
+                />
+              </div>
+              <h1 className="pl-5 font-medium !leading-[1.5] text-4xl sm:text-8xl">
+                Hi, I&apos;m <span className="font-bold">Matt</span>
+                <span className="font-bold text-blue-600">.</span>
+              </h1>
+            </div>
+          </section>
+        </SlideReveal>
       </div>
-      <motion.h1
-        className="pb-10 pt-5 px-5 text-2xl font-medium !leading-[1.5] sm:text-3xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}>
-        Hi, I&apos;m <span className="font-bold">Matt</span>! I&apos;m a{" "}
-        <span className="font-bold">machine learning</span> engineer,{" "}
-        <span className="font-bold">software</span> engineer and{" "}
-        <span className="font-bold">researcher</span> with almost a decade of
-        experience. My focus is building{" "}
-        <span className="underline">interesting products and models</span>.
-      </motion.h1>
+      <SlideReveal>
+        <h2 className="pb-10 text-md sm:text-3xl">
+          I&apos;m a <span className="font-bold">machine learning</span>{" "}
+          engineer, <span className="font-bold">software</span> engineer and{" "}
+          <span className="font-bold">researcher</span> with almost a decade of
+          experience. My focus is building{" "}
+          <span className="underline">interesting products and models</span>.
+        </h2>
+      </SlideReveal>
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.1,
+          delay: 0.5,
+          duration: 0.25,
         }}>
         <Link
           href="#contact"
-          className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition">
+          className="bg-blue-800 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-blue-500 active:scale-105 transition">
           Contact me <BsMailbox />
         </Link>
         <a
