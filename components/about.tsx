@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import SectionHeading from "./section_heading";
+import SectionHeading from "./ui/SectionHeading";
 
 export default function About() {
   return (

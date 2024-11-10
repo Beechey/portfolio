@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section_heading";
+import SectionHeading from "./ui/SectionHeading";
 import { skillsData } from "@/lib/data";
 
 export default function Skills() {
