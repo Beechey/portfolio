@@ -39,7 +39,7 @@ export default function Intro() {
       </div>
 
       <SlideReveal>
-        <h2 className="pb-3 text-md sm:text-3xl">
+        <h2 className="pb-3 text-2xl sm:text-3xl">
           I&apos;m a{" "}
           <span className="font-bold text-blue-500">machine learning</span>{" "}
           engineer, <span className="font-bold text-blue-500">software</span>{" "}
