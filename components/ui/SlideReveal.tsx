@@ -34,8 +34,7 @@ export default function SlideReveal({
         initial="hidden"
         animate={mainControls}
         transition={{
-          duration: 0.5,
-          delay: 0.25,
+          duration: 0.25,
         }}>
         {children}
       </motion.div>
@@ -47,7 +46,7 @@ export default function SlideReveal({
         }}
         initial="hidden"
         animate={slideControls}
-        transition={{ duration: 0.5, ease: "easeIn" }}
+        transition={{ duration: 0.25, ease: "easeIn" }}
         style={{
           position: "absolute",
           top: 4,
