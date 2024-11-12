@@ -35,7 +35,7 @@ export default function Project({
         target="_blank">
         <section
           id="projects"
-          className="relative bg-gray-600 max-w-[42rem] border border-black/5 overflow-hidden sm:h-[20rem] hover:bg-gray-500 transition rounded-lg">
+          className="relative bg-gray-600 max-w-full border border-black/5 overflow-hidden sm:h-[20rem] hover:bg-gray-500 transition rounded-lg">
           <div className="flex flex-col p-8 sm:pt-10 sm:max-w-[50%] h-full sm:group-even:ml-[50%]">
             <h3 className="text-2xl font-semibold">{title}</h3>
             <p className="mt-2 leading-relaxed text-gray-300">{description}</p>
@@ -51,7 +51,7 @@ export default function Project({
           </div>
 
           <Image
-            className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-105 transition group-even:group-hover:translate-x-3 group-even:-right-[initial] group-even:-left-40 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2"
+            className="absolute hidden sm:block top-8 -right-40 w-[32rem] rounded-t-lg shadow-2xl group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-105 transition group-even:group-hover:translate-x-3 group-even:-right-[initial] group-even:-left-40 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2"
             src={image}
             alt={description}
             quality={95}
