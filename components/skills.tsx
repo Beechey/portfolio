@@ -17,7 +17,7 @@ export default function Skills() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.025 * index,
+        duration: 0.05 * index,
       },
     }),
   };
