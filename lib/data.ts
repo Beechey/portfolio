@@ -25,7 +25,7 @@ export const links = [
   },
   {
     name: "Experience",
-    hash: "#experience",
+    hash: "#experiences",
   },
   {
     name: "Contact",
@@ -67,28 +67,28 @@ export const projectsData = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Doctoral Researcher",
+    company: "Loughborough University",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I started my doctorate programme in 2019, with the aim to research in the machine learning and network security domains.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2019 - 2022",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Technical Product Owner",
+    company: "Vectare Ltd",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked as a Technical Product Owner, developing embedded devices and integrating with a Django system for machine learning model creation.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2022 - 2024",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Machine Learning Researcher",
+    company: "Loughborough University",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Working for Loughborough University, researching utilising Graph Neural Networks in the Neyond 5G networking field - specifically in network slicing.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024 - Present",
   },
 ] as const;
 
