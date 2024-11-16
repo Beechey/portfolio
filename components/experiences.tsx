@@ -58,7 +58,7 @@ export default function Experiences() {
       <div className="relative">
         <div className="absolute top-0 h-[100%] w-1 bg-blue-600"></div>
         <div>
-          {experiencesData.map((experience, index) => (
+          {experiencesData.toReversed().map((experience, index) => (
             <React.Fragment key={index}>
               <Experience {...experience} />
             </React.Fragment>
