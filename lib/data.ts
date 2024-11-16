@@ -67,6 +67,14 @@ export const projectsData = [
 
 export const experiencesData = [
   {
+    title: "Research Assistant",
+    company: "Loughborough University",
+    description:
+      "Assisting in researching scalable micro-data cluster usages for web services. Experimented with web page serving time and data caching, utilising both Docker containerised, and bare-metal services.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2018",
+  },
+  {
     title: "Doctoral Researcher",
     company: "Loughborough University",
     description:
@@ -86,7 +94,7 @@ export const experiencesData = [
     title: "Machine Learning Researcher",
     company: "Loughborough University",
     description:
-      "Working for Loughborough University, researching utilising Graph Neural Networks in the Neyond 5G networking field - specifically in network slicing.",
+      "Working for Loughborough University, researching utilising Graph Neural Networks in the Beyond 5G networking field - specifically in network slicing.",
     icon: React.createElement(LuGraduationCap),
     date: "2024 - Present",
   },
