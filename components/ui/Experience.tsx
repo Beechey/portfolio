@@ -31,7 +31,7 @@ export default function Experience({
       className="group mb-8 last:mb-0">
       <section
         id="experiences"
-        className="relative bg-gray-700 max-w-[45%] border border-white/5 overflow-hidden sm:h-[20rem] hover:bg-gray-500 transition rounded-lg sm:group-even:ml-[55%] xs:w-full">
+        className="relative bg-gray-700 w-full sm:max-w-[45%] border border-white/5 overflow-hidden sm:h-[20rem] hover:bg-gray-500 transition rounded-lg sm:group-even:ml-[55%]">
         <div className="flex flex-col p-8 sm:max-w-full h-full">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-300">
