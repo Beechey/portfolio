@@ -20,17 +20,22 @@ export default function Experience({
     offset: ["0 1", "1.15 1"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
     <div className="pb-8 last:pb-0">
-      <div className="absolute w-5 h-5 bg-blue-600 -left-[0.5rem]"></div>
+      <motion.div
+        ref={ref}
+        style={{
+          opacity: opacityProgress,
+        }}
+        className="absolute w-5 h-5 bg-blue-600 -left-[0.5rem]"></motion.div>
 
       <motion.div
         className="flex flex-col sm:max-w-full h-full pl-6"
         ref={ref}
         style={{
-          scale: scaleProgress,
+          // scale: scaleProgress,
           opacity: opacityProgress,
         }}>
         <div className="border border-white border-opacity-[10%] p-8 bg-gray-700 rounded-lg hover:bg-gray-600 transition">
