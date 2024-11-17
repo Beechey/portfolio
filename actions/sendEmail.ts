@@ -1,6 +1,6 @@
 "use server";
 
-import { validateString } from "@/lib/utils";
+import { getErrorMessage, validateString } from "@/lib/utils";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -21,11 +21,15 @@ export const sendEmail = async (formData: FormData) => {
     };
   }
 
-  resend.emails.send({
-    from: "Portfolio Contact Form <onboarding@resend.dev>",
-    to: "mattbeechey@gmail.com",
-    subject: "Message from portfolio",
-    replyTo: email as string,
-    text: message as string,
-  });
+  try {
+    resend.emails.send({
+      from: "Portfolio Contact Form <onboarding@resend.dev>",
+      to: "mattbeechey@gmail.com",
+      subject: "Message from portfolio",
+      replyTo: email as string,
+      text: message as string,
+    });
+  } catch (error: unknown) {
+    return getErrorMessage(error);
+  }
 };
