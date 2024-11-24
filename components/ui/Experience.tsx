@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { experiencesData } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { section } from "framer-motion/client";
 
 type ExperienceProps = (typeof experiencesData)[number];
 
@@ -11,7 +10,6 @@ export default function Experience({
   title,
   company,
   description,
-  icon,
   date,
 }: ExperienceProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,7 +17,6 @@ export default function Experience({
     target: ref,
     offset: ["0 1", "1.15 1"],
   });
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
