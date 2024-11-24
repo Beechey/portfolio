@@ -27,7 +27,14 @@ export default function Contact() {
 
       <motion.form
         action={async (formData) => {
-          await sendEmail(formData);
+          const { error } = await sendEmail(formData);
+
+          if (error) {
+            alert(error);
+            return;
+          }
+
+          alert("Email sent successfully");
         }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
