@@ -2,10 +2,10 @@
 
 import React from "react";
 import SectionHeading from "./ui/SectionHeading";
-import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SlideReveal from "./ui/SlideReveal";
 import { sendEmail } from "@/actions/sendEmail";
+import SubmitButton from "./ui/SubmitButton";
 
 export default function Contact() {
   return (
@@ -56,11 +56,7 @@ export default function Contact() {
           placeholder="Your message"
           required
         />
-        <button
-          type="submit"
-          className="flex w-[8rem] bg-blue-800 text-white px-7 py-3 items-center gap-2 rounded-full outline-none hover:bg-blue-500 transition">
-          Submit <FaPaperPlane />
-        </button>
+        <SubmitButton />
       </motion.form>
     </section>
   );
