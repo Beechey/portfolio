@@ -7,7 +7,7 @@ type SectionHeadingProps = {
 
 export default function SectionHeading({ children }: SectionHeadingProps) {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center text-center">
       <SlideReveal>
         <h2 className="pb-8 text-3xl sm:text-6xl underline decoration-blue-500 capitalize font-semibold">
           {children}
