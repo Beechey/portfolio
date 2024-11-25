@@ -15,7 +15,7 @@ export default function Contact() {
       className="mb-28 max-w-[50rem] sm:mb-0 scroll-mt-32 pb-12">
       <SectionHeading>Contact me</SectionHeading>
       <SlideReveal>
-        <p>
+        <p className="text-center">
           Please contact me directly at{" "}
           <a
             href="mailto:mattbeechey@gmail.com"
