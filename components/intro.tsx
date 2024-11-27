@@ -71,7 +71,7 @@ export default function Intro() {
           Contact me <BsMailbox />
         </Link>
         <a
-          href="/Dr Matthew Beechey - CV.pdf"
+          href="/Dr Matthew Beechey Industry - CV.pdf"
           download
           className="bg-white text-gray-900  px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-100 active:scale-105 transition border border-black/10">
           Download CV <HiDownload />
