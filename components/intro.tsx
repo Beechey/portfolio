@@ -52,9 +52,9 @@ export default function Intro() {
           With almost a decade of experience, my focus is building{" "}
           <span className="underline">interesting products and models</span>. My
           interests span different areas, but are squarely focused around
-          technology. I acquired a PhD in machine learning in 2023, and since
-          then have been involved in hardware engineering, machine learning
-          engineering, data science and web development.
+          technology. I acquired a PhD in machine learning in 2023, and have
+          been involved in hardware engineering, machine learning engineering,
+          data science and web development.
         </h2>
       </SlideReveal>
       <motion.div
