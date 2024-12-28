@@ -4,6 +4,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import lrdsImg from "@/public/lrds.png";
 import nndsImg from "@/public/nnds.png";
 import busmonitorImg from "@/public/busmonitor-post.png";
+import trafficinsightImg from "@/public/traffic_insight.png";
 
 export const links = [
   {
@@ -33,6 +34,14 @@ export const links = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "Traffic Insight",
+    link: "#",
+    description:
+      "Developed a traffic aware computer vision system to detect and track vehicle junction usage. Fine-tuned YOLO11 model for better aerial vehicle detection.",
+    image: trafficinsightImg,
+    tags: ["Pytorch", "OpenCV", "Computer Vision", "Transportation"],
+  },
   {
     title: "LR-DS",
     link: "https://www.sciencedirect.com/science/article/pii/S095070512100383X",
