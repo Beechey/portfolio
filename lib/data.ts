@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { LuGraduationCap, LuWrench } from "react-icons/lu";
+import { LuGraduationCap } from "react-icons/lu";
 import lrdsImg from "@/public/lrds.png";
 import nndsImg from "@/public/nnds.png";
 import busmonitorImg from "@/public/busmonitor-post.png";
@@ -111,7 +111,7 @@ export const experiencesData = [
     company: "TransHumanity",
     description:
       "Leading the AI/ML team in developing a multi-agentic AI and machine learning application for transportation for local authorities.",
-    icon: React.createElement(LuWrench),
+    icon: React.createElement(CgWorkAlt),
     date: "2025 - Present",
   },
 ] as const;
