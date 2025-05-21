@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { LuGraduationCap } from "react-icons/lu";
+import { LuGraduationCap, LuWrench } from "react-icons/lu";
 import lrdsImg from "@/public/lrds.png";
 import nndsImg from "@/public/nnds.png";
 import busmonitorImg from "@/public/busmonitor-post.png";
@@ -91,10 +91,10 @@ export const experiencesData = [
     date: "2019 - 2022",
   },
   {
-    title: "Technical Product Owner",
+    title: "Technical Product Manager",
     company: "Vectare Ltd",
     description:
-      "I worked as a Technical Product Owner, developing embedded devices and integrating with a Django system for machine learning model creation.",
+      "I worked as a Technical Product Manager, developing embedded devices and integrating with a Django system for machine learning model creation.",
     icon: React.createElement(CgWorkAlt),
     date: "2022 - 2024",
   },
@@ -104,7 +104,15 @@ export const experiencesData = [
     description:
       "Working for Loughborough University, researching utilising Graph Neural Networks in the Beyond 5G networking field - specifically in network slicing.",
     icon: React.createElement(LuGraduationCap),
-    date: "2024 - Present",
+    date: "2024 - 2025",
+  },
+  {
+    title: "Lead AI Engineer",
+    company: "TransHumanity",
+    description:
+      "Leading the AI/ML team in developing a multi-agentic AI and machine learning application for transportation for local authorities.",
+    icon: React.createElement(LuWrench),
+    date: "2025 - Present",
   },
 ] as const;
 
