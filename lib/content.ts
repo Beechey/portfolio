@@ -82,6 +82,10 @@ export type Project = {
   blurb: string
   detail: string
   image?: string
+  /** Shown instead of an image: a prompt, a few code/log lines, a result line. */
+  panel?: { prompt: string; lines: readonly string[]; result: string }
+  /** A drawn UI mock-up component, shown instead of an image. */
+  mock?: "relay"
   tags: readonly string[]
   href?: string
   hrefLabel?: string
@@ -95,6 +99,15 @@ export const projects: Project[] = [
     blurb: "Multi-agent decision intelligence with receipts.",
     detail:
       "A platform that lets transport authorities ask questions of their operational data in plain language. Specialist agents resolve each question against a customer-defined ontology and emit a structured query, so every figure in an answer traces back to its snapshot and SQL.",
+    panel: {
+      prompt: "? which junctions saw the most incidents last quarter",
+      lines: [
+        "SELECT junction_id, COUNT(*)",
+        "FROM incidents @snapshot 2025-06-30",
+        "GROUP BY 1 ORDER BY 2 DESC",
+      ],
+      result: "✓ every figure traced to source",
+    },
     tags: ["LangGraph", "FastAPI", "Apache Iceberg", "DuckDB", "Agents"],
     href: "https://transhumanity.ai",
     hrefLabel: "TransHumanity",
@@ -125,6 +138,18 @@ export const projects: Project[] = [
   },
   {
     figure: "Fig. 5",
+    title: "Relay",
+    year: "2026",
+    blurb: "A remote-first media player for Android TV.",
+    detail:
+      "A native Android TV, Google TV and mobile player for IPTV services that use the Xtream Codes API. It ships no content and has no server of its own: it signs in to the user's own provider and turns very large catalogues into a fast, remote-friendly TV app with a live guide, a movie and series library, search and resume. Catalogues are streamed to disk and the XMLTV guide is parsed as it downloads, so huge playlists never run out of memory, and signed releases update themselves from GitHub.",
+    mock: "relay",
+    tags: ["Kotlin", "Jetpack Compose", "Android TV", "Media3 / ExoPlayer", "Streaming parsers"],
+    href: "https://github.com/Beechey/relay-releases",
+    hrefLabel: "Releases",
+  },
+  {
+    figure: "Fig. 6",
     title: "NN-DS",
     year: "2022",
     blurb: "Defending classifiers with epistemic uncertainty.",
@@ -136,7 +161,7 @@ export const projects: Project[] = [
     hrefLabel: "Information Fusion",
   },
   {
-    figure: "Fig. 6",
+    figure: "Fig. 7",
     title: "LR-DS",
     year: "2021",
     blurb: "Feature selection by what the model doesn't know.",
