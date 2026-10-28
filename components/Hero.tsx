@@ -19,7 +19,7 @@ export default function Hero() {
   const stats = [
     { k: "PhD", v: "ML for network security" },
     { k: `${papers.length}`, v: "journal papers" },
-    { k: "8+", v: "years shipping & researching" },
+    { k: "10+", v: "years building & researching" },
   ]
 
   return (
