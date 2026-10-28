@@ -81,13 +81,24 @@ export type Project = {
   year: string
   blurb: string
   detail: string
-  image: string
+  image?: string
   tags: readonly string[]
   href?: string
   hrefLabel?: string
 }
 
 export const projects: Project[] = [
+  {
+    figure: "Fig. 2",
+    title: "Aptiq",
+    year: "2025—now",
+    blurb: "Multi-agent decision intelligence with receipts.",
+    detail:
+      "A platform that lets transport authorities ask questions of their operational data in plain language. Specialist agents resolve each question against a customer-defined ontology and emit a structured query, so every figure in an answer traces back to its snapshot and SQL.",
+    tags: ["LangGraph", "FastAPI", "Apache Iceberg", "DuckDB", "Agents"],
+    href: "https://transhumanity.ai",
+    hrefLabel: "TransHumanity",
+  },
   {
     figure: "Fig. 3",
     title: "Traffic Insight",
