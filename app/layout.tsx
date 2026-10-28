@@ -1,46 +1,44 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import Nav from "@/components/ui/Navbar";
-import { Toaster } from "react-hot-toast";
-import Footer from "@/components/footer";
+import type { Metadata } from "next"
+import { Geist, Geist_Mono } from "next/font/google"
+import { Toaster } from "react-hot-toast"
+import Colophon from "@/components/Colophon"
+import Masthead from "@/components/Masthead"
+import { person } from "@/lib/content"
+import "./globals.css"
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist", display: "swap" })
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono", display: "swap" })
 
 export const metadata: Metadata = {
-  title: "Dr Matt Beechey | Portfolio",
-  description:
-    "Dr Matt Beechey is a software and machine learning engineer with a decade of experience.",
-};
+  metadataBase: new URL(`https://www.${person.site}`),
+  title: `${person.prefix} ${person.name} — ${person.roleLine}`,
+  description: person.standfirst,
+  openGraph: {
+    title: `${person.prefix} ${person.name}`,
+    description: person.standfirst,
+    type: "profile",
+  },
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className="!scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#111111] text-white relative pt-28 sm:pt-36`}>
-        <div className="hidden sm:block bg-[#6f5617] absolute top-[-1rem] -z-10 right-[0rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
-        <div className="hidden sm:block bg-[#2f4975] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
-
-        <Nav />
-        <Toaster position="bottom-right" />
+    <html lang="en-GB" className={`${geist.variable} ${geistMono.variable}`}>
+      <body className="min-h-dvh bg-void">
+        <Masthead />
+        <Toaster
+          position="bottom-right"
+          toastOptions={{
+            style: {
+              background: "#13161b",
+              color: "#f2f4f7",
+              border: "1px solid rgb(255 255 255 / 0.1)",
+              fontSize: "0.875rem",
+            },
+          }}
+        />
         {children}
-        <Footer />
+        <Colophon />
       </body>
     </html>
-  );
+  )
 }
