@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# mattbeechey.com
 
-## Getting Started
+Personal site for Dr Matthew Beechey — machine learning engineer, researcher and
+product manager. Next.js App Router, statically prerendered, deployed on Vercel.
 
-First, run the development server:
+## Run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm run build
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The contact form is a server action using [Resend](https://resend.com) and needs
+`RESEND_API_KEY` in the environment. Everything else is static.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing content
 
-## Learn More
+**All copy lives in [`lib/content.ts`](lib/content.ts)** — bio, the Aptiq case
+study, projects, publications, career history, education and toolkit are data,
+not markup. The components only decide how that content is set. Dates and titles
+there are taken from the CV in `public/`, so update both together.
 
-To learn more about Next.js, take a look at the following resources:
+## Design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Editorial/academic press: warm paper, high-contrast serif, numbered sections, a
+single vermilion accent used only for emphasis and figure marks.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Type** — Fraunces for display (its `SOFT` and `WONK` axes are what give the
+  headings their warmth), Newsreader for body, JetBrains Mono for labels.
+- **Palette** — paper `#F7F4ED`, ink `#191713`, vermilion `#BF3B21`. Plate blue
+  `#2B4C7E` appears only inside figures.
+- **Tokens** are defined once in [`app/globals.css`](app/globals.css) under
+  `@theme` (Tailwind v4 — there is no `tailwind.config.ts`).
 
-## Deploy on Vercel
+Every animation is gated behind `prefers-reduced-motion`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Figure 1
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[`components/FigureOne.tsx`](components/FigureOne.tsx) draws a two-class sample
+with a decision boundary and a hatched band either side of it. Points inside the
+band are ones an evidential classifier declines rather than guesses — the
+mechanism behind both published papers. The layout uses a seeded PRNG so the
+sample never reshuffles between renders.
+
+## Case sensitivity
+
+macOS is case-insensitive; Vercel builds on Linux. If you rename a component's
+casing, use `git mv --force` so the change actually lands in the index — an
+import of `@/components/Contact` against a tracked `contact.tsx` builds locally
+and fails in CI.
