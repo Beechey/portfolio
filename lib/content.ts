@@ -129,10 +129,10 @@ export const projects: Project[] = [
     year: "2022",
     blurb: "Defending classifiers with epistemic uncertainty.",
     detail:
-      "A defence against adversarial machine learning attacks built on evidential classification. Rather than hardening the decision boundary, the model is given a way to say it is uncertain — which turns out to catch adversarial inputs that a confident classifier waves through.",
+      "A neural network built on Dempster–Shafer evidence theory that can label an input as uncertain instead of guessing. It needs no adversarial training and no warning that an attack is coming. Against DeepFool and JSMA perturbations on CSE-CIC-IDS2018 traffic, it cut misclassification of the two attacked malicious classes from 70.53% to 13.09% and from 99.67% to 1.33%.",
     image: "/nnds.png",
-    tags: ["PyTorch", "Adversarial ML", "Evidence theory", "Classification"],
-    href: "https://www.sciencedirect.com/science/article/pii/S1566253522002342",
+    tags: ["PyTorch", "Adversarial ML", "Evidence theory", "CSE-CIC-IDS2018"],
+    href: "https://doi.org/10.1016/j.inffus.2022.11.024",
     hrefLabel: "Information Fusion",
   },
   {
@@ -141,10 +141,10 @@ export const projects: Project[] = [
     year: "2021",
     blurb: "Feature selection by what the model doesn't know.",
     detail:
-      "A feature selection technique for binary classifiers that ranks features by the epistemic uncertainty they resolve rather than the accuracy they add. Selects smaller subsets that converge faster, with no loss in classification performance.",
+      "An evidential logistic regression that measures how much uncertainty each feature contributes, so an analyst can rank features from most to least ambiguous without cyber-threat expertise. Benchmarked against Decision Tree, Random Forest, Lasso and ANOVA across seven classifiers: F1 of 0.99 using, on average, under a third of the classification time.",
     image: "/lrds.png",
-    tags: ["PyTorch", "Feature selection", "Uncertainty", "Network security"],
-    href: "https://www.sciencedirect.com/science/article/pii/S095070512100383X",
+    tags: ["PyTorch", "Feature selection", "Logistic regression", "Network security"],
+    href: "https://doi.org/10.1016/j.knosys.2021.107120",
     hrefLabel: "Knowledge-Based Systems",
   },
 ]
@@ -161,16 +161,23 @@ export type Paper = {
   abstract: string
 }
 
+export const thesis = {
+  title: "Evidence Theory Based Machine Learning Approaches for Network Security",
+  school: "Loughborough University",
+  year: "2023",
+  href: "https://doi.org/10.26174/thesis.lboro.22890080.v1",
+}
+
 export const papers: Paper[] = [
   {
     title: "Evidential classification for defending against adversarial attacks on network traffic",
     authors: "M. Beechey, S. Lambotharan, K. G. Kyriakopoulos",
     venue: "Information Fusion",
-    detail: "Vol. 92, pp. 115—126",
-    year: "2022",
-    href: "https://www.sciencedirect.com/science/article/pii/S1566253522002342",
+    detail: "Vol. 92, pp. 115—126 · Open access",
+    year: "2023",
+    href: "https://doi.org/10.1016/j.inffus.2022.11.024",
     abstract:
-      "Machine learning classifiers are brittle under adversarial perturbation. Evidential classification lowers the error rate on perturbed instances while preserving performance on genuine malicious network traffic.",
+      "The first work to harden a neural network against adversarial attacks in network security using evidential classification. Instead of chasing accuracy, the model is allowed to call ambiguous instances uncertain, with no training on perturbed data and no prior knowledge of the attack. Against DeepFool and JSMA, misclassification of the two perturbed malicious classes fell from 70.53% to 13.09% and from 99.67% to 1.33%.",
   },
   {
     title: "Evidential classification and feature selection for cyber-threat hunting",
@@ -178,9 +185,9 @@ export const papers: Paper[] = [
     venue: "Knowledge-Based Systems",
     detail: "Vol. 226, 107120",
     year: "2021",
-    href: "https://www.sciencedirect.com/science/article/pii/S095070512100383X",
+    href: "https://doi.org/10.1016/j.knosys.2021.107120",
     abstract:
-      "Evidence theory exposes how much each feature's uncertainty contributes to a classification decision, letting an analyst rank features from most to least ambiguous without domain expertise in cyber threats.",
+      "Evidence theory exposes how much each feature's uncertainty contributes to a classification decision, letting an analyst rank features from most to least ambiguous without cyber-threat expertise, and build threat phenotypes that tell similar attacks apart. The selected features matched or beat the state of the art across seven classifiers, reaching an F1 score of 0.99 while classifying in 29.25% of the average time of other techniques.",
   },
 ]
 

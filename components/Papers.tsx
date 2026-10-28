@@ -1,5 +1,5 @@
 import { Rise, SectionMark } from "@/components/ui/primitives"
-import { papers, person } from "@/lib/content"
+import { papers, person, thesis } from "@/lib/content"
 
 export default function Papers() {
   return (
@@ -44,8 +44,11 @@ export default function Papers() {
 
       <Rise delay={0.2}>
         <p className="mt-8 text-sm text-muted">
-          Thesis: <span className="text-fg">Evidence Theory Based Machine Learning Approaches for Network Security</span>,
-          Loughborough University, 2022. Further work on graph neural networks for beyond-5G networking is
+          Thesis:{" "}
+          <a href={thesis.href} target="_blank" rel="noreferrer" className="link">
+            {thesis.title}
+          </a>
+          , {thesis.school}, {thesis.year} (open access). Further work on graph neural networks for beyond-5G networking is
           listed on{" "}
           <a href={person.linkedin} target="_blank" rel="noreferrer" className="link">
             LinkedIn
