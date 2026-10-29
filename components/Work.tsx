@@ -1,5 +1,6 @@
 import Image from "next/image"
 import RelayMock from "@/components/RelayMock"
+import SeamMock from "@/components/SeamMock"
 import { Rise, SectionMark } from "@/components/ui/primitives"
 import { type Project, projects } from "@/lib/content"
 
@@ -10,7 +11,7 @@ export default function Work() {
         n="02"
         kicker="Selected work"
         title="Things I've built"
-        note="Four shipped systems and two research methods — from firmware on buses and an Android TV app to multi-agent AI."
+        note="Four shipped systems, two research methods and one in progress — from firmware on buses and an Android TV app to multi-agent AI and end-to-end encryption."
       />
 
       <div className="mt-16 grid gap-5 md:grid-cols-2">
@@ -30,6 +31,8 @@ export default function Work() {
                   />
                 ) : p.mock === "relay" ? (
                   <RelayMock />
+                ) : p.mock === "seam" ? (
+                  <SeamMock />
                 ) : (
                   p.panel && <CodePanel {...p.panel} />
                 )}

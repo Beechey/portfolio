@@ -85,7 +85,7 @@ export type Project = {
   /** Shown instead of an image: a prompt, a few code/log lines, a result line. */
   panel?: { prompt: string; lines: readonly string[]; result: string }
   /** A drawn UI mock-up component, shown instead of an image. */
-  mock?: "relay"
+  mock?: "relay" | "seam"
   tags: readonly string[]
   href?: string
   hrefLabel?: string
@@ -171,6 +171,18 @@ export const projects: Project[] = [
     tags: ["PyTorch", "Feature selection", "Logistic regression", "Network security"],
     href: "https://doi.org/10.1016/j.knosys.2021.107120",
     hrefLabel: "Knowledge-Based Systems",
+  },
+  {
+    figure: "Fig. 8",
+    title: "Seam",
+    year: "In progress",
+    blurb: "An end-to-end encrypted link between Android and Mac.",
+    detail:
+      "Open-source app that stitches an Android phone to a Mac, built on the Signal Protocol through Signal's own libsignal, including its post-quantum key exchange. One Rust crypto core is shared by a SwiftUI menu bar app and a Jetpack Compose Android app, with a Protobuf message format and a Cloudflare Worker that routes sealed messages it cannot read. The core, message format, both app shells and CI are in place; clipboard sync works on a real phone, and notifications, texts and files are next.",
+    mock: "seam",
+    tags: ["Rust", "libsignal", "Swift", "Kotlin", "Cloudflare Workers", "Protobuf"],
+    href: "https://github.com/aveterosystems/seam",
+    hrefLabel: "Repository",
   },
 ]
 
