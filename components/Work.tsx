@@ -11,7 +11,7 @@ export default function Work() {
         n="02"
         kicker="Selected work"
         title="Things I've built"
-        note="Four shipped systems, two research methods and one in progress — from firmware on buses and an Android TV app to multi-agent AI and end-to-end encryption."
+        note="Five shipped systems and two research methods — from firmware on buses and an Android TV app to multi-agent AI and end-to-end encryption."
       />
 
       <div className="mt-16 grid gap-5 md:grid-cols-2">
@@ -36,7 +36,10 @@ export default function Work() {
                 ) : (
                   p.panel && <CodePanel {...p.panel} />
                 )}
-                <span className="chip absolute top-3 left-3 bg-void/80 backdrop-blur">{p.year}</span>
+                <div className="absolute top-3 left-3 flex gap-1.5">
+                  <span className="chip bg-void/80 backdrop-blur">{p.year}</span>
+                  {p.openSource && <span className="chip bg-void/80 text-accent backdrop-blur">Open source</span>}
+                </div>
               </div>
 
               <div className="flex flex-1 flex-col p-6 sm:p-7">

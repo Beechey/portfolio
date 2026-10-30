@@ -87,6 +87,8 @@ export type Project = {
   /** A drawn UI mock-up component, shown instead of an image. */
   mock?: "relay" | "seam"
   tags: readonly string[]
+  /** Shows an "Open source" chip on the card. */
+  openSource?: boolean
   href?: string
   hrefLabel?: string
 }
@@ -114,6 +116,19 @@ export const projects: Project[] = [
   },
   {
     figure: "Fig. 3",
+    title: "Seam",
+    year: "2026",
+    blurb: "An end-to-end encrypted link between Android and Mac.",
+    detail:
+      "An open-source (AGPL-3.0) app that stitches an Android phone to a Mac, end-to-end encrypted with the Signal Protocol through Signal's own libsignal, including its post-quantum key exchange. One Rust core holds all the cryptography and is shared by a SwiftUI menu bar app and a Jetpack Compose Android app. Devices pair once with a QR code; messages go through a Cloudflare Worker relay that cannot read them, or a private relay you run yourself, and the next release adds a direct, Noise-encrypted link on the same Wi-Fi. Signed releases already sync the clipboard both ways, show the phone's battery in the menu bar and its notifications in Notification Centre, and update themselves; texts and files are next.",
+    mock: "seam",
+    tags: ["Rust", "libsignal", "Noise", "Swift", "Kotlin", "Cloudflare Workers", "Protobuf"],
+    openSource: true,
+    href: "https://github.com/aveterosystems/seam",
+    hrefLabel: "Source on GitHub",
+  },
+  {
+    figure: "Fig. 4",
     title: "Traffic Insight",
     year: "2025",
     blurb: "Aerial computer vision for junction usage.",
@@ -125,7 +140,7 @@ export const projects: Project[] = [
     hrefLabel: "Repository",
   },
   {
-    figure: "Fig. 4",
+    figure: "Fig. 5",
     title: "BusMONITOR",
     year: "2022—2024",
     blurb: "An embedded sensor suite for public transport.",
@@ -137,7 +152,7 @@ export const projects: Project[] = [
     hrefLabel: "Write-up",
   },
   {
-    figure: "Fig. 5",
+    figure: "Fig. 6",
     title: "Relay",
     year: "2026",
     blurb: "A remote-first media player for Android TV.",
@@ -149,7 +164,7 @@ export const projects: Project[] = [
     hrefLabel: "Releases",
   },
   {
-    figure: "Fig. 6",
+    figure: "Fig. 7",
     title: "NN-DS",
     year: "2022",
     blurb: "Defending classifiers with epistemic uncertainty.",
@@ -161,7 +176,7 @@ export const projects: Project[] = [
     hrefLabel: "Information Fusion",
   },
   {
-    figure: "Fig. 7",
+    figure: "Fig. 8",
     title: "LR-DS",
     year: "2021",
     blurb: "Feature selection by what the model doesn't know.",
@@ -171,18 +186,6 @@ export const projects: Project[] = [
     tags: ["PyTorch", "Feature selection", "Logistic regression", "Network security"],
     href: "https://doi.org/10.1016/j.knosys.2021.107120",
     hrefLabel: "Knowledge-Based Systems",
-  },
-  {
-    figure: "Fig. 8",
-    title: "Seam",
-    year: "In progress",
-    blurb: "An end-to-end encrypted link between Android and Mac.",
-    detail:
-      "Open-source app that stitches an Android phone to a Mac, built on the Signal Protocol through Signal's own libsignal, including its post-quantum key exchange. One Rust crypto core is shared by a SwiftUI menu bar app and a Jetpack Compose Android app, with a Protobuf message format and a Cloudflare Worker that routes sealed messages it cannot read. The core, message format, both app shells and CI are in place; clipboard sync works on a real phone, and notifications, texts and files are next.",
-    mock: "seam",
-    tags: ["Rust", "libsignal", "Swift", "Kotlin", "Cloudflare Workers", "Protobuf"],
-    href: "https://github.com/aveterosystems/seam",
-    hrefLabel: "Repository",
   },
 ]
 
